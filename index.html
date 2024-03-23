@@ -13,9 +13,12 @@
 
     <div class="container flex bg-black">
         <div class="left ">
+            <div class="close">
+                <img width="30px" class="invert cross" src="./close.svg" alt="close/cross/cancel-icon">
+            </div>
             <div class="home bg-grey rounded m-1 p-1">
                 <div class="logo">
-                    <img class="invert" src="./logo.svg" alt="logo">
+                    <img width="120px" class="invert" src="./logo.svg" alt="logo">
                 </div>
                 <ul>
                     <li><img class="invert" src="./home.svg" alt="home">Home</li>
@@ -29,6 +32,12 @@
                     <h2>
                         your library
                     </h2>
+
+                </div>
+                <div class="songList">
+                    <ul>
+
+                    </ul>
                 </div>
                 <div class="footer">
                     <div><a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
@@ -46,8 +55,12 @@
         <div class="right rounded bg-grey">
             <div class="header">
                 <div class="nav">
-                    <img class="invert" src="./lefticon.svg" alt="left-icon" width="19px">
-                    <img class="invert" src="./righticon.svg" alt="right-icon" width="19px">
+                    <div class="hamburgerContainer">
+                        <img class="invert hamburger" src="./hamburger.svg" alt="hamburger-icon" width="40px">
+
+                        <img class="invert" src="./lefticon.svg" alt="left-icon" width="19px">
+                        <img class="invert" src="./righticon.svg" alt="right-icon" width="19px">
+                    </div>
                 </div>
                 <div class="button">
                     <button class="signupbtn">Sign up</button>
@@ -66,7 +79,7 @@
                                     stroke="currentColor" fill="#000" stroke-width="1.5" stroke-linejoin="round" />
                             </svg>
                         </div>
-                        <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="">
+                        <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="artist-image">
                         <h2>Pritam</h2>
                         <p>Artist</p>
 
@@ -80,7 +93,7 @@
                                     stroke="currentColor" fill="#000" stroke-width="1.5" stroke-linejoin="round" />
                             </svg>
                         </div>
-                        <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="">
+                        <img src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="artist-image">
                         <h2>Pritam</h2>
                         <p>Artist</p>
 
@@ -90,13 +103,20 @@
 
             </div>
             <div class="playbar">
-                <div class="songinfo"></div>
-                <div class="songbutton">
-                    <img src="./prevsong.svg" alt="previuos button">
-                    <img src="./play.svg" alt="play button">
-                    <img src="./nextsong.svg" alt="next button">
+                <div class="seekbar">
+                    <div class="circle">
+
+                    </div>
                 </div>
-                <div class="songtime"></div>
+                <div class="aboveBar">
+                    <div class="songinfo"></div>
+                    <div class="songbutton">
+                        <img id="previous" src="./prevsong.svg" alt="previuos button">
+                        <img id="play" src="./play.svg" alt="play button">
+                        <img id="next" src="./nextsong.svg" alt="next button">
+                    </div>
+                    <div class="songtime"></div>
+                </div>
             </div>
         </div>
         <script src="./script.js"></script>
