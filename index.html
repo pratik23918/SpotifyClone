@@ -70,7 +70,7 @@
             <div class="spotifyPlaylists">
                 <h1>Spotify playlists</h1>
                 <div class="cardContainer">
-                    <div class="card ">
+                    <div data-folder="cs" class="card ">
                         <div class="play">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
                                 color="#000000" fill="none">
@@ -84,7 +84,7 @@
                         <p>Artist</p>
 
                     </div>
-                    <div class="card ">
+                    <div data-folder="ncs" class="card ">
                         <div class="play">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
                                 color="#000000" fill="none">
@@ -111,11 +111,19 @@
                 <div class="aboveBar">
                     <div class="songinfo"></div>
                     <div class="songbutton">
-                        <img id="previous" src="./prevsong.svg" alt="previuos button">
-                        <img id="play" src="./play.svg" alt="play button">
-                        <img id="next" src="./nextsong.svg" alt="next button">
+                        <img width="35px" id="previous" src="./prevsong.svg" alt="previuos button">
+                        <img width="35px" id="play" src="./play.svg" alt="play button">
+                        <img width="35px" id="next" src="./nextsong.svg" alt="next button">
                     </div>
-                    <div class="songtime"></div>
+                    <div class="timenvol">
+                        <div class="songtime"></div>
+                        <div class="volume">
+                            <img src="./volume.svg" alt="volume-icons">
+                            <div class="range">
+                                <input type="range" name="volume" id="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
