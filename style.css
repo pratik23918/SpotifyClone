@@ -113,7 +113,7 @@ body {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    max-height: 80vh;
+    max-height: 52vh;
     overflow-y: auto;
     /* justify-content: center; */
 }
@@ -331,6 +331,10 @@ body {
     justify-content: center;
     align-items: center;
     gap: 15px;
+    cursor: pointer;
+}
+.range input{
+    cursor: pointer;
 }
 .timenvol{
     display: flex;
@@ -385,6 +389,7 @@ body {
 
     .hamburger {
         display: block;
+        cursor: pointer;
     }
 
     .left .close {
@@ -397,7 +402,8 @@ body {
     }
 
     .card {
-        width: 40vw;
+        /* width: 40vw; */
+        width: auto;
     }
 
     .cardContainer {
@@ -422,11 +428,30 @@ body {
         flex-direction: column;
         gap: 13px;
     }
+    .cardContainer{
+    margin: 35px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-height: 32vh;
+    overflow-y: auto;
+    justify-content: center;
+    }
 
 }
 @media (max-width: 400px){
    .card{
-    width: 84vw;
+    /* width: 84vw; */
+    width: auto;
    }
+   .cardContainer {
+    margin: 35px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-height: 40vh;
+    overflow-y: auto;
+    /* justify-content: center; */
+}
 }
 
