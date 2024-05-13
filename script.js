@@ -30,7 +30,7 @@ function secondsToMinuteSeconds(seconds) {
 async function getSongs(folder) {
     curFolder = folder;
     //fetch api I've used 
-    let a = await fetch(`/songs/${folder}`)
+    let a = await fetch(`http://127.0.0.1:3000/${folder}/`)
     let response = await a.text();
     // console.log(response);
     let div = document.createElement("div")
@@ -79,7 +79,7 @@ async function getSongs(folder) {
 }
 
 const playMusic = (track, pause = false) => {
-    currentSong.src = `./${curFolder}/` + track;
+    currentSong.src = `/${curFolder}/` + track;
     if (!pause) {
         currentSong.play();
         play.src = "pause.svg";
@@ -93,7 +93,7 @@ const playMusic = (track, pause = false) => {
 
 //Display Albums method
 async function displayAlbums() {
-    let a = await fetch(`/songs/`)
+    let a = await fetch(`http://127.0.0.1:3000/songs`)
     let response = await a.text();
     console.log(response);
     let div = document.createElement("div")
@@ -112,7 +112,7 @@ async function displayAlbums() {
             let folder = e.href.split("/").slice(-2)[0]
             // console.log(folder)
             //get the metadata of the folder
-            let a = await fetch(`${folder}/info.json`)
+            let a = await fetch(`http://127.0.0.1:3000/songs/${folder}/info.json`)
             let response = await a.json();
             console.log(response);
             cardContainer.innerHTML = cardContainer.innerHTML + `<div data-folder="${folder}" class="card ">
@@ -126,7 +126,7 @@ async function displayAlbums() {
             </div>
             <img src="/songs/${folder}/covers.jpeg" alt="artist-image">
             <h2>${response.title}</h2>
-            <p>Artist</p>
+            <p>${response.Singer}</p>
 
         </div>`
 
